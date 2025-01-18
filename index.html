@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <h1>Hello world!</h1>
+    <p>Hi!, I am </p>
+
+    <!-- option - 1 -->
+    <button id="makeRed" onclick="document.body.style.background='red'">Red</button>
+    <button id="makeBlue" onclick="blueFun()">Blue</button>
+    <button id="makeYellow">Yellow</button>
+    <button id="makePink">Pink</button>
+    <button id="makeGreen">Green</button>
+    <button id="makeBlack">Black</button>
+    <button id="makePurple">Purple</button>
+
+
+    <script>
+
+    //    option-2
+        function blueFun(){
+           document.body.style.background='blue';
+        }
+
+        //option-3
+
+        const yellow = document.getElementById('makeYellow');
+        yellow.onclick = yellowFun
+
+        function yellowFun(){
+            document.body.style.background='yellow';
+        }
+
+        //option-4
+        const pink = document.getElementById('makePink');
+       
+        pink.onclick = function pinkFun(){
+            document.body.style.background='pink';
+        }
+
+        //option 5
+        const green = document.getElementById('makeGreen');
+        green.addEventListener('click', greenFun);
+       function greenFun(){
+        document.body.style.background='green';
+        }
+
+        //option - 6
+        const black = document.getElementById('makeBlack');
+        black.addEventListener('click', function blackFun(){
+            document.body.style.background='black';
+            
+        })
+
+        //option - 7
+
+        const purple = document.getElementById('makePurple').addEventListener('click',function purpleFun(){
+            document.body.style.background='purple';
+        })
+
+
+    </script>
+
+
+</body>
+</html>
