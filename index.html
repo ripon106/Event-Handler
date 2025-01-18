@@ -9,7 +9,7 @@
     
 
     <h1>Hello world!</h1>
-    <p>Hi!, I am </p>
+    <p id="display">Hi!, I am </p>
 
     <!-- option - 1 -->
     <button id="makeRed" onclick="document.body.style.background='red'">Red</button>
@@ -20,6 +20,12 @@
     <button id="makeBlack">Black</button>
     <button id="makePurple">Purple</button>
 
+
+    <!-- Form whit changing text -->
+     <form action="">
+        <label for="">Enter your name <input id="user_name" type="text"></label>
+        <button onclick="showInfo()">Show text</button>
+     </form>
 
     <script>
 
@@ -63,6 +69,19 @@
         const purple = document.getElementById('makePurple').addEventListener('click',function purpleFun(){
             document.body.style.background='purple';
         })
+
+
+        function showInfo(){
+                const userInput = document.getElementById('user_name');
+                console.log(userInput)
+                const dis = document.getElementById('display');
+                console.log(dis);
+                dis.innerText = userInput.value;
+                userInput.value = ' ';
+                //if you want to result please inspect and show
+
+
+        }
 
 
     </script>
